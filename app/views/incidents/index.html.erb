@@ -1,0 +1,22 @@
+<h1>Incidents</h1>
+
+<div class="description">
+  Define an incident by chaining conditions into a given time range. An incident is created when this incident description
+  matches on the messages collection. Example description: More than 10 messages including "could not connect to example.com/api"
+  in the last 2 minutes causes incidents "Example API down".
+</div>
+
+<% form_for @new_incident, :url => { :action => "create" } do |f| %>
+  <%= f.label :title, "Name:" %>
+  <%= f.text_field :title, :maxlength => 75, :size => 30 %>
+  <%= submit_tag "Create incident description" %>
+<% end %>
+
+<% @incidents.each do |incident| %>
+  <div class="blocks">
+    <span class="blocks-title"><%= link_to h(incident.title), { :action => "explain", :id => incident.id } %></span>
+    <div class="blocks-subtitle">0 today / 5 total</div>
+  </div>
+<% end %>
+
+<br style="clear: both;" />
