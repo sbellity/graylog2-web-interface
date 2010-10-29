@@ -4,35 +4,119 @@
   <head>
   <title>Dashboard</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="Refresh" CONTENT="5" />
+  <!--<meta http-equiv="Refresh" CONTENT="5" />-->
   <link rel="shortcut icon" href="/favicon.ico" />
   <%= stylesheet_link_tag "reset" %>
   <%= stylesheet_link_tag "dashboard" %>
   <%= stylesheet_link_tag "messages" %>
   <%= javascript_include_tag "jquery-1.4.2.min" %>
+  <%= javascript_include_tag "worldmap" %>
   <%= javascript_include_tag "dashboard" %>
 </head>
 <body>
 
-  <% message_count_interval = Setting.get_message_count_interval(current_user) %>
-
-  <div id="top">
-    <% if File.exist?(RAILS_ROOT + "/public/images/dashboard_logo.png") %>
-        <%= image_tag('dashboard_logo.png') %>
-    <% end %>
-    <div id="top-timestamp">
-      <%= Time.now %>
-    </div>
-  </div>
-
-  <div id="statuscontainer" class="status-<%=h Message.count_of_last_minutes(message_count_interval) > Setting.get_message_max_count(current_user) ? 'problems' : 'okay' %>">
-    <div id="status">
-      <h1><%= Message.count_of_last_minutes(message_count_interval) %> messages / <%=h message_count_interval %> minutes</h1>
-    </div>
-  </div>
-
   <div id="content">
-    <%= yield %>
+
+    <div id="left">
+      <div id="counts">
+
+        <div class="count">
+          <div class="count-description">
+            <h2>Web Servers</h2>
+            <div class="count-subtitle">
+              <span class="count-minutes">10 minutes</span>
+              /
+              <span class="count-percent">84.42%</span>
+            </div>
+          </div>
+          <div class="count-number">361</div>
+          <br style="clear: both;" />
+        </div>
+
+        <div class="count">
+          <div class="count-description">
+            <h2>CMS Servers</h2>
+            <div class="count-subtitle">
+              <span class="count-minutes">30 minutes</span>
+              /
+              <span class="count-percent">43.6%</span>
+            </div>
+          </div>
+          <div class="count-number">682</div>
+          <br style="clear: both;" />
+        </div>
+
+        <div class="count">
+          <div class="count-description">
+            <h2 class="status-alarm">Mail out</h2>
+            <div class="count-subtitle status-alarm">
+              <span class="count-minutes">30 minutes</span>
+              /
+              <span class="count-percent">152.4%</span>
+            </div>
+          </div>
+          <div class="count-number status-alarm">1727</div>
+          <br style="clear: both;" />
+        </div>
+
+        <div class="count">
+          <div class="count-description">
+            <h2 class="status-alarm">Mail in</h2>
+            <div class="count-subtitle status-alarm">
+              <span class="count-minutes">10 minutes</span>
+              /
+              <span class="count-percent">74.7%</span>
+            </div>
+          </div>
+          <div class="count-number status-alarm">1825</div>
+          <br style="clear: both;" />
+        </div>
+
+        <div class="count">
+          <div class="count-description">
+            <h2>PayPal API</h2>
+            <div class="count-subtitle">
+              <span class="count-minutes">30 minutes</span>
+              /
+              <span class="count-percent">98.6%</span>
+            </div>
+          </div>
+          <div class="count-number">98</div>
+          <br style="clear: both;" />
+        </div>
+
+        <div class="count">
+          <div class="count-description">
+            <h2>All HTTP</h2>
+            <div class="count-subtitle">
+              <span class="count-minutes">10 minutes</span>
+              /
+              <span class="count-percent">63.92%</span>
+            </div>
+          </div>
+          <div class="count-number">84235</div>
+          <br style="clear: both;" />
+        </div>
+
+        <div class="count">
+          <div class="count-description">
+            <h2>DNS</h2>
+            <div class="count-subtitle">
+              <span class="count-minutes">10 minutes</span>
+              /
+              <span class="count-percent">25.8%</span>
+            </div>
+          </div>
+          <div class="count-number">10526</div>
+          <br style="clear: both;" />
+        </div>
+        
+      </div>
+     </div>
+
+    <div id="right">
+      <canvas id="worldmap" width="736" height="300"></canvas>
+    </div>
   </div>
 
 </body>

@@ -1,65 +1,250 @@
 body {
-    font-family: Helvetica,Arial,sans-serif;
+    font-family: "Gentium Basic", "Georgia", "Palatino", "Times New Roman", "Baskerville", "Hoefler Text", serif;
+    font-size: 10px;
     overflow: hidden;
+    background-color: #1F242A;
+    padding: 20px;
 }
 
-table {
-    font-size: 11px;
-    width: 100%;
-}
-
-th {
-    text-align: left;
-    padding-right: 15px;
-    padding-bottom: 2px;
-    border-bottom: 1px dashed #222222;
-    font-size: 12px;
-}
-
-#top {
-    margin: 15px auto;
-    width: 90%;
-    height: 50px;
-}
-
-#top-timestamp {
-    float: right;
-    font-size: 17px;
-    margin-top: 40px;
-    color: #444;
-}
-
-#statuscontainer {
-    width: 100%;
+h1 {
+    font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
     color: #fff;
+    font-size: 20px;
+    font-weight: normal;
 }
 
-#status {
-    margin: 0px auto;
-    padding: 30px;
-    width: 90%;
-}
-
-#status h1 {
-    text-shadow: -1px -1px 0 #060;
-    font-size: 50px;
-    margin-left: 15px;
-}
-
-.status-problems {
-    background-color: #ff2500;
-}
-
-.status-okay {
-    background-color: #58b300;
+h2 {
+    font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 #content {
-    width: 90%;
-    margin: 15px auto;
+    width: 1000px;
+    margin: 0px auto;
 }
 
-.messages td {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+#left {
+    float: left;
+    width: 375px;
+    background-color: #37414A;
+    color: #fff;
+}
+
+#right {
+    margin-left: 375px;
+}
+
+#counts {
+    margin-top: 2px;
+}
+
+#counts-head {
+    text-align: center;
+    padding-bottom: 18px;
+}
+
+#counts-head h1 {
+    font-size: 40px;
+}
+
+.count {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 2px;
+    clear: both;
+    border-bottom: 1px solid #1F242A;
+}
+
+.count-description {
+    margin-top: 1px;
+    width: 235px;
+    float: left;
+}
+
+.count-description h2 {
+    display: inline;
+    font-size: 25px;
+}
+
+.count-subtitle {
+    margin-top: 2px;
+    display: block;
+    font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
+}
+
+.count-number {
+    float: right;
+    width: 125px;
+    font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
+    font-size: 35px;
+}
+
+.count-percent {
+
+}
+
+.status-alarm {
+    color: #ec414a !important;
+}
+
+#worldmap {
+    margin-top: 15px;
+}
+
+/* Webfont stuff */  
+.afs-ubuntu { font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;}
+
+.afs-gentium-basic { font-family: "Gentium Basic", "Georgia", "Palatino", "Times New Roman", "Baskerville", "Hoefler Text", serif;}
+
+.afs-charis-sil { font-family: "Charis SIL", "Georgia", "Palatino", "Times New Roman", "Baskerville", "Hoefler Text", serif;}
+
+.afs-liberation-mono { font-family: "Liberation Mono", Menlo, Courier New, Courier, Mono, monospace;}
+
+
+@font-face {
+font-family: Ubuntu;
+src: url('/fonts/ubuntu/Ubuntu-I-webfont.ttf');
+src: local('☺'), url('/fonts/ubuntu/Ubuntu-I-webfont.woff') format('woff'), url('/fonts/ubuntu/Ubuntu-I-webfont.ttf') format('truetype'), url('/fonts/ubuntu/Ubuntu-I-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: Ubuntu;
+src: url('/fonts/ubuntu/Ubuntu-B-webfont.ttf');
+src: local('☺'), url('/fonts/ubuntu/Ubuntu-B-webfont.woff') format('woff'), url('/fonts/ubuntu/Ubuntu-B-webfont.ttf') format('truetype'), url('/fonts/ubuntu/Ubuntu-B-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Ubuntu;
+src: url('/fonts/ubuntu/Ubuntu-R-webfont.ttf');
+src: local('☺'), url('/fonts/ubuntu/Ubuntu-R-webfont.woff') format('woff'), url('/fonts/ubuntu/Ubuntu-R-webfont.ttf') format('truetype'), url('/fonts/ubuntu/Ubuntu-R-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Ubuntu;
+src: url('/fonts/ubuntu/Ubuntu-BI-webfont.ttf');
+src: local('☺'), url('/fonts/ubuntu/Ubuntu-BI-webfont.woff') format('woff'), url('/fonts/ubuntu/Ubuntu-BI-webfont.ttf') format('truetype'), url('/fonts/ubuntu/Ubuntu-BI-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: Gentium Basic;
+src: url('/fonts/Gentium-Basic/GenBasR-webfont.ttf');
+src: local('☺'), url('/fonts/Gentium-Basic/GenBasR-webfont.woff') format('woff'), url('/fonts/Gentium-Basic/GenBasR-webfont.ttf') format('truetype'), url('/fonts/Gentium-Basic/GenBasR-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Gentium Basic;
+src: url('/fonts/Gentium-Basic/GenBasI-webfont.ttf');
+src: local('☺'), url('/fonts/Gentium-Basic/GenBasI-webfont.woff') format('woff'), url('/fonts/Gentium-Basic/GenBasI-webfont.ttf') format('truetype'), url('/fonts/Gentium-Basic/GenBasI-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: Gentium Basic;
+src: url('/fonts/Gentium-Basic/GenBasB-webfont.ttf');
+src: local('☺'), url('/fonts/Gentium-Basic/GenBasB-webfont.woff') format('woff'), url('/fonts/Gentium-Basic/GenBasB-webfont.ttf') format('truetype'), url('/fonts/Gentium-Basic/GenBasB-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Gentium Basic;
+src: url('/fonts/Gentium-Basic/GenBasBI-webfont.ttf');
+src: local('☺'), url('/fonts/Gentium-Basic/GenBasBI-webfont.woff') format('woff'), url('/fonts/Gentium-Basic/GenBasBI-webfont.ttf') format('truetype'), url('/fonts/Gentium-Basic/GenBasBI-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: Charis SIL;
+src: url('/fonts/Charis-SIL/CharisSILB-webfont.ttf');
+src: local('☺'), url('/fonts/Charis-SIL/CharisSILB-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILB-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILB-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Charis SIL;
+src: url('/fonts/Charis-SIL/CharisSILBI-webfont.ttf');
+src: local('☺'), url('/fonts/Charis-SIL/CharisSILBI-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILBI-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILBI-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: Charis SIL;
+src: url('/fonts/Charis-SIL/CharisSILR-webfont.ttf');
+src: local('☺'), url('/fonts/Charis-SIL/CharisSILR-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILR-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILR-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Charis SIL;
+src: url('/fonts/Charis-SIL/CharisSILI-webfont.ttf');
+src: local('☺'), url('/fonts/Charis-SIL/CharisSILI-webfont.woff') format('woff'), url('/fonts/Charis-SIL/CharisSILI-webfont.ttf') format('truetype'), url('/fonts/Charis-SIL/CharisSILI-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: Liberation Mono;
+src: url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.ttf');
+src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-Bold-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Liberation Mono;
+src: url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.ttf');
+src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-BoldItalic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: Liberation Mono;
+src: url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.ttf');
+src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-Regular-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: Liberation Mono;
+src: url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.ttf');
+src: local('☺'), url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.woff') format('woff'), url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.ttf') format('truetype'), url('/fonts/Liberation-Mono/LiberationMono-Italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
 }
