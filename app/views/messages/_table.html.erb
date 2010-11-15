@@ -1,5 +1,6 @@
 <% message_length = Setting.get_message_length(current_user) %>
 
+<br style="clear: both;" />
 <table class="messages<%= defined?(@inline_version) ? " messages-inline" : nil %>">
   <thead>
     <tr>
@@ -33,6 +34,18 @@
   </tbody>
 </table>
 
+<div id="messages-bar">
+  <div id="messages-bar-content">
+    <h1>Ohai! I'm the <span class="highlighted">new</span> sidebar</h1>
+    ...boxmodel. Still srsly ugly.
+    <br /><br />
+    I have a lot of space to the right, grow dynamically (60% / 40%) and work in all views using this partial.<br />
+    I guess there has to be some work done at the messages table also.
+  </div>
+</div>
+
+<br style="clear: both;" />
+
 <%
   params[:page].blank? ? current_page = 1 : current_page = params[:page].to_i;
   next_page = current_page+1;
@@ -50,5 +63,6 @@
   <% end %>
 </div>
 
-<br style="clear: both;" />
 <% end %>
+
+<br style="clear: both;" />

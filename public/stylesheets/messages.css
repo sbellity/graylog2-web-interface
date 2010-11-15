@@ -2,6 +2,8 @@
     font-family: 'Lucida Grande',Verdana,sans-serif !important;
     font-size: 10px;
     margin-top: 10px;
+    float: left;
+    width: 60%;
 }
 
 .messages-inline {
@@ -15,4 +17,19 @@
 
 .messages td {
     padding: 2px;
+}
+
+#messages-bar {
+  margin-top: 10px;
+  margin-left: 60%;
+}
+
+#messages-bar-content {
+  margin-left: 15px;
+}
+
+#messages-bar h1 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 5px;
 }

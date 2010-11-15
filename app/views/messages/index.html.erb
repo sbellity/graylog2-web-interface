@@ -4,8 +4,6 @@
   Quickfilter
 </div>
 
-<div id="messages-content">
-
 <div id="messages-favorited-streams">
   <% unless @favorites.blank? %>
     Favorite streams: <%= select("favoritestreamchooser", "id", @favorites.collect {|p| [ p.stream.title, p.stream.id ] }, { :include_blank => true }) %>
@@ -58,4 +56,3 @@ messages in the last <%=h message_count_interval %> minutes.
 <br style="clear: both;" />
 
 <%= render :partial => "messages/table", :locals => { :messages => @messages, :inline_version => true, :total_messages => @total_count } %>
-</div>
