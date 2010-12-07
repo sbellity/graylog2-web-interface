@@ -284,19 +284,20 @@
     top: -15px;
 }
 
-/* Livetail */
-.content-livetail {
+/* Livetail / Livegraph */
+.content-live {
   background-color: #000 !important;
   color: #ccc !important;
   font-family: monospace;
 }
 
-.livetail-head {
+.live-head {
   color: #fff;
   font-family: monospace;
   display: inline;
 }
 
+/* Livetail */
 #livetail-status {
   text-transform: uppercase;
   font-size: 15px;
