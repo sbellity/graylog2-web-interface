@@ -23,28 +23,10 @@ module ApplicationHelper
 
   def get_ordered_facilities_for_select
       [
-        ["Kernel (0)", 0],
-        ["User-Level (1)", 1],
-        ["Mail (2)", 2],
-        ["System Daemon (3)", 3],
-        ["Security/Authorization (4/10)", 4],
-        ["Syslogd (5)", 5],
-        ["Line Printer (6)", 6],
-        ["News (7)", 7],
-        ["UUCP (8)", 8],
-        ["Clock (9/15)", 9],
-        ["FTP (11)", 11],
-        ["NTP (12)", 12],
-        ["Log Audit (13)", 13],
-        ["Log Alert (14)", 14],
-        ["local0 (16)", 16],
-        ["local1 (17)", 17],
-        ["local2 (18)", 18],
-        ["local3 (19)", 19],
-        ["local4 (20)", 20],
-        ["local5 (21)", 21],
-        ["local6 (22)", 22],
-        ["local7 (23)", 23]
+        ["GameServer", 128],
+        ["AdbServer", 136],
+        ["LttServer", 152],
+        ["Dispatcher", 144]
       ]
   end
 
@@ -105,6 +87,10 @@ module ApplicationHelper
       when 21 then return "local5"
       when 22 then return "local6"
       when 23 then return "local7"
+      when 128 then return "GameServer"
+      when 152 then return "LttServer"
+      when 136 then return "AdbServer"
+      when 144 then return "Dispatcher"
     end
 
     return "Unknown"
