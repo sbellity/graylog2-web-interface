@@ -13,6 +13,7 @@ gem 'mysql2', '0.2.4'
 gem 'rack', '1.2.1'
 gem 'pony'
 gem 'em-websocket', '0.1.4'
+gem "thin", "1.2.7"
 
 group :development, :test do
   gem 'machinist_mongo', :require => 'machinist/mongo_mapper'
